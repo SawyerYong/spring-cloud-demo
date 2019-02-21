@@ -1,0 +1,13 @@
+package com.yongs.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HelloController {
+
+	@RequestMapping("/hello")
+	public String sayHello(String name) {
+		return "hello,"+name+",this is remote message2";
+	}
+}

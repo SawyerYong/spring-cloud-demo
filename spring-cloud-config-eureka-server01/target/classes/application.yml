@@ -1,0 +1,22 @@
+spring: 
+    application: 
+        name: spring-cloud-config-server
+# spring cloud config server 
+    cloud: 
+        config: 
+            server: 
+                git: 
+                    uri: https://github.com/devYongs/config-repo/     #git仓库地址
+                    search-paths: config     #git仓库地址下的相对地址
+                    username: dev_yongs@163.com
+                    password: password   
+# tomcat port
+server: 
+     port: 8003 
+#将spring cloud config server 注册到eureka
+eureka: 
+    client:
+        serviceUrl: 
+            defaultZone: http://localhost01:8000/eureka/
+
+ 

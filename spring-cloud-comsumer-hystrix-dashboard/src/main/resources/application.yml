@@ -1,0 +1,17 @@
+#应用名称
+spring: 
+    application: 
+        name: spring-cloud-consumer
+#tomcat端口号 
+server: 
+     port: 9001 
+#Eureka服务注册中心地址
+eureka: 
+    client:
+        serviceUrl: 
+            defaultZone: http://localhost01:8000/eureka/ 
+#使用hystrix
+feign: 
+    hystrix: 
+        enabled: true
+ 
